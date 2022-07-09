@@ -1,0 +1,76 @@
+footer {
+    background-image: url(../img/wood_1.png);
+    
+    .footer__NavBarSocial a {
+        border: 5px solid $colorPrimario;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            animation-name: lightf;
+            animation-duration: 5s;
+            animation-iteration-count:infinite;
+            border-radius: 50%;
+        }
+
+        .face {
+            background-color: #3b5998;
+            &:hover {
+            animation: none;
+            }
+        }
+
+        .insta {
+            background-color: #bc2a8d;
+        
+            &:hover {
+            animation: none;
+            }
+        }
+
+        .wapp {
+            background-color: #25D366;
+
+            &:hover {
+            animation: none;
+            }
+        }
+
+        .mail {
+            background-color: #b2936d;
+        
+            &:hover {
+            animation: none;
+            }
+        }
+        @keyframes lightf {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    }
+}                
+.footer__NavBar {
+    a {
+        font-size: 2em;
+        font-family: "Hurricane", cursive;
+        text-decoration: none;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        text-shadow: 0px 0px 8px white, 39px -10px 20px $colorPrimario, 15px -10px 1px #bc2a8e6c;
+        transform: scale(1.5);
+        transition: 1s;
+        -webkit-text-stroke: 0.5px black;
+        color: transparent;
+    }
+}
+
+        
+            

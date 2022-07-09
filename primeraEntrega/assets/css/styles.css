@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&family=Smooch+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&family=Junge&family=Smooch+Sans:wght@300;400&display=swap");
+/*****SITIO******/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header .headerNavbar {
+  font-family: "Hurricane";
+  font-style: italic;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+  header .headerNavbar {
+    font-size: 2em;
+    height: 270px;
+  }
+}
+
+header nav {
+  background-image: url(../img/wood_1.png);
+}
+
+header nav .burguerIcon {
+  background-color: silver;
+  border: 3px solid white;
+  border-radius: 20%;
+  -webkit-box-shadow: 3px 3px silver, 4px 4px white;
+          box-shadow: 3px 3px silver, 4px 4px white;
+}
+
+header nav .burguerIcon:active {
+  -webkit-box-shadow: 2px 2px silver;
+          box-shadow: 2px 2px silver;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+header nav .navbar-toggler {
+  width: 120px;
+}
+
+header nav .navegacion {
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
+}
+
+header nav .headerNavbar_Nav {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-animation-name: logoFadeIn;
+          animation-name: logoFadeIn;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+header nav .backgroundDropDown {
+  font-size: 1.5em;
+  background-color: rgba(247, 239, 239, 0.74);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 575px) {
+  header nav .dnone {
+    display: none;
+  }
+}
+
+header nav .menuFly {
+  -webkit-animation-name: menuFly;
+          animation-name: menuFly;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-box-shadow: -4px 4px 0px #bc2a8d;
+          box-shadow: -4px 4px 0px #bc2a8d;
+}
+
+@-webkit-keyframes menuFly {
+  from {
+    top: 5cm;
+  }
+  to {
+    top: 1.7cm;
+  }
+}
+
+@keyframes menuFly {
+  from {
+    top: 5cm;
+  }
+  to {
+    top: 1.7cm;
+  }
+}
+
+header nav .dropdown-toggle::after {
+  color: #bc2a8d;
+}
+
+@media (max-width: 570px) {
+  header nav .dropdown-menu {
+    min-width: 0;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+
+header .imgEncabezado {
+  height: 350px;
+  font-family: "Hurricane";
+  letter-spacing: 5px;
+  font-weight: lighter;
+  color: silver;
+}
+
+header .imgEncabezado h1 {
+  font-size: 3em;
+  -webkit-animation-name: logoFadeIn;
+          animation-name: logoFadeIn;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@media (min-width: 260px) {
+  header .imgEncabezado h1 {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 400px) {
+  header .imgEncabezado h1 {
+    font-size: 6em;
+    -webkit-transition: 3s;
+    transition: 3s;
+  }
+}
+
+@media (min-width: 768px) {
+  header .imgEncabezado h1 {
+    font-size: 8em;
+    -webkit-transition: 3s;
+    transition: 3s;
+  }
+}
+
+footer {
+  background-image: url(../img/wood_1.png);
+}
+
+footer .footer__NavBarSocial a {
+  border: 5px solid silver;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+footer .footer__NavBarSocial a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-animation-name: lightf;
+          animation-name: lightf;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+footer .footer__NavBarSocial a .face {
+  background-color: #3b5998;
+}
+
+footer .footer__NavBarSocial a .face:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+footer .footer__NavBarSocial a .insta {
+  background-color: #bc2a8d;
+}
+
+footer .footer__NavBarSocial a .insta:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+footer .footer__NavBarSocial a .wapp {
+  background-color: #25D366;
+}
+
+footer .footer__NavBarSocial a .wapp:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+footer .footer__NavBarSocial a .mail {
+  background-color: #b2936d;
+}
+
+footer .footer__NavBarSocial a .mail:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes lightf {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightf {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer__NavBar a {
+  font-size: 2em;
+  font-family: "Hurricane", cursive;
+  text-decoration: none;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__NavBar a:hover {
+  text-shadow: 0px 0px 8px white, 39px -10px 20px silver, 15px -10px 1px #bc2a8e6c;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-text-stroke: 0.5px black;
+  color: transparent;
+}
+
+.logo {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Junge", serif;
+  -webkit-animation-name: logoFadeIn;
+          animation-name: logoFadeIn;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+.logo img {
+  -webkit-box-shadow: 7px 7px #999;
+          box-shadow: 7px 7px #999;
+}
+
+.logo img:active {
+  -webkit-box-shadow: 4px 4px #666;
+          box-shadow: 4px 4px #666;
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+}
+
+@-webkit-keyframes logoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.woodBoard {
+  background-image: url(../img/wood_1.png);
+}
+
+.tituloWoodboard {
+  font-size: 2em;
+  font-weight: 100;
+  font-family: "Inria Serif", serif;
+  -webkit-text-decoration: underline solid silver 2px;
+          text-decoration: underline solid silver 2px;
+  color: silver;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.parrafoWoodboard {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Inria Serif", serif;
+  text-decoration: none;
+  color: #c6cfd8;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.titulo {
+  font-size: 1.5em;
+  font-weight: 100;
+  font-family: "Inria Serif", serif;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  color: black;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 3.5em;
+  }
+}
+
+.parrafo {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Inria Serif", serif;
+  text-decoration: none;
+  color: #444444;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+/******PRODUCTOS****/
+/*SECCION_ENCABEZADO**/
+.imgEncabezadoProductos {
+  background-image: url(../img/ProductosHeader.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.buttonCards:hover {
+  color: white;
+}
+
+.show {
+  -webkit-animation-name: displaySlow;
+          animation-name: displaySlow;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes displaySlow {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+@keyframes displaySlow {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+.cardsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 750px) {
+  .cardsDiv {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.cardFont {
+  font-family: "Junge", serif;
+}
+
+.card-text {
+  font-family: "Hurricane";
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #bc2a8d;
+}
+
+.cardValue {
+  font-family: "Hurricane";
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.matias {
+  background-color: #bc2a8d;
+}
+/*# sourceMappingURL=styles.css.map */

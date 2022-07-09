@@ -1,0 +1,45 @@
+/*SECCION_ENCABEZADO**/
+  .imgEncabezadoProductos {
+    background-image: url(../img/ProductosHeader.jpg); 
+    background-position: center;
+    background-size: cover;
+  } 
+
+  .buttonCards:hover {
+  color: white;
+}
+.show {
+  animation-name: displaySlow;
+  animation-duration: 3s;
+}
+@keyframes displaySlow {
+  from {display: none;}
+  to {display: block;}
+}
+.cardsDiv {
+
+  display: flex;
+  justify-content: center;
+  @media (max-width: 750px) {
+    justify-content: space-between;
+  }
+}
+.cardFont {
+  font-family: $logoFontFam;
+}
+.card-text {
+  font-family: "Hurricane";
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #bc2a8d;
+}
+.cardValue {
+  font-family: "Hurricane";
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.matias {
+  background-color: #bc2a8d;
+}
