@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&family=Smooch+Sans:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&family=Junge&family=Smooch+Sans:wght@300;400&display=swap');
+
+
+/*****SITIO******/
+    @import "./sitio/_reset";
+    @import "./sitio/_variables";
+    @import "./sitio/_header.scss";
+    @import "./sitio/_footer.scss";
+    @import "./sitio/_Logos.scss";
+    @import"./sitio/_main.scss";
+    
+
+    /******PRODUCTOS****/
+        @import "./paginaProductos/paginaProductos";
+
+

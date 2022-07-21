@@ -59,20 +59,22 @@
           id="navbarNavDropdown">
           <ul class="navbar-nav headerNavbar_Nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white"
-                href="#"
+              <a class="nav-link text-white miCarritoPointer"
                 id="navbarDropdownMenuLink"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false">
-                Bodega
+                Mi Carrito<i
+                class="fa-solid fa-cart-arrow-down"></i>
               </a>
               <div class="dropdown-menu bg-transparent p-0 menuFly"
-                aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item backgroundDropDown"
-                  href="../pages/bodega.html">Nuestra Bodega</a>
-                <a class="dropdown-item backgroundDropDown dnone"
-                  href="../pages/bodega.html#Acerca_De_Nosotros">Acerca de nosotros</a>
+                aria-labelledby="navbarDropdownMenuLink" id="div-productos-carrito">
+                <div class="dropdown-item backgroundDropDown" id="carrito-syrah"></div>
+                <div class="dropdown-item backgroundDropDown" id="carrito-vermouth"></div>
+                <div class="dropdown-item backgroundDropDown" id="carrito-bonarda"></div>
+                <div class="dropdown-item backgroundDropDown" id="carrito-viognier"></div>
+                <div class="dropdown-item backgroundDropDown" id="carrito-total"></div>
+
               </div>
             </li>
             <li class="nav-item">
@@ -122,11 +124,31 @@
   </header>
 
   <main>
-
+    <section class="row border my-5 mx-2 rounded p-3">
+      <div class="d-flex flex-column col-xl-2 text-center border rounded p-3" id="bienvenido">
+        <p class="fw-bolder my-1">Por favor ingrese su edad por favor</p>
+        <input type="number" id="input-edad" placeholder="Ingrese su edad" class = "my-1 text-center">
+        <input type="submit" id="btn-inputedad" value="Acceso a la tienda" class="bg-black text-white"> 
+      </div>
+      <div class="col-xl-10 d-flex flex-column border rounded p-3" id="div-buscador">
+        <div class ="d-flex justify-content-center align-items-center flex-wrap">
+          <input type="button" id="btn-busqueda" value="Buscar" class="bg-primary text-white m-1 inputB"> por
+          <input type="search" name="buscadorTexto" id="buscador-texto" class ="my-1 text-center text-primary m-1 inputB" placeholder="Nombre o tipo"> ó por
+          <input type="search" name="buscadorPrecio" id="buscador-precioMax" class ="my-1 text-center text-primary m-1 inputB" placeholder="Precio Maximo">
+          <input type="search" name="buscadorPrecio" id="buscador-precioMin" class ="my-1 text-center text-primary m-1 inputB" placeholder="Precio Minimo">
+          <input type="button" id="btn-nuevaBusqueda" value="Nueva Busqueda" class="w-75 btn-dark m-1"> 
+        </div>
+        <div>
+          <div id="div-objetosEncontrados">
+          
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- SECCION_TEXTO_PRINCIPAL -->
     <section class="row justify-content-center text-center mt-5">
 
-      <p class="parrafo row col-xl-6 col-lg-8 col-md-8 col-sm-8 col-8 shadow">
+      <p class="parrafo row col-xl-6 col-lg-8 col-md-8 col-sm-8 col-8 shadow" >
         Nuestros vinos son elaborados con nuestras propias manos, son orgánicos, artesanales y
         carecen de sulfitos agregados, lo que conserva el sabor original y noble de nuestros cortes y le da a nuestros
         vinos un toque de distinción frente a aquellos elaborados de manera industrial.
@@ -142,9 +164,11 @@
           <div class="card-header text-primary bg-dark text-center cardFont">
             Finca El Boleado
           </div>
+          <div id="descuento-div" class="cardDescuentoDiv">
           <img class="card-img-top"
             src="./assets/img/cardSyrah.jpg"
-            alt="Card image cap">
+            alt="Card image cap" id="img">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Syrah</h5>
             <p class="card-text">Amable y refrescante.</p>
@@ -159,40 +183,24 @@
                     data-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
-                    id="buttonToggle">
+                    id="btn-caractSyrah">
                     Características
                   </button>
                 </h5>
               </div>
-              <div id="collapseOne"
-                class="collapse"
+              <div id="collapse"
+                class="collapse-show"
                 aria-labelledby="headingOne"
                 data-parent="#accordion">
-                <div class="card-body">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><img src="./assets/img/eye.png"
-                        alt=""> Rojo purpureo de tono intenso</li>
-                    <li class="list-group-item"><img src="./assets/img/nose.png"
-                        alt=""> Chocolate, coco y carbon</li>
-                    <li class="list-group-item"><img src="./assets/img/tongue.png"
-                        alt=""> Frutal, suave y sedoso</li>
-                    <li class="list-group-item">Intensidad en boca: <i class="fa-solid fa-wine-glass"></i><i
-                        class="fa-solid fa-wine-glass"></i></li>
-                    <li class="list-group-item">Persistencia: <i class="fa-solid fa-wine-glass"></i></li>
-                  </ul>
+                <div class="card-body" id="div-caractSyrah">
                 </div>
               </div>
             </div>
           </div>
           <div class="card-body bg-dark text-center d-flex justify-content-around align-items-center">
-            <p class="m-0 text-white">$</p>
-            <p id="precioIva"
-              class="text-white m-0">900</p>
-            <p class="m-0 text-white">+ IVA</p>
-            <a id="carrito"
-              href="#"
-              class="card-link text-decoration-none cardFont">Agregar al carrito <i
-                class="fa-solid fa-cart-arrow-down"></i></a>
+            <button id="agregar-carrito-syrah"
+              class="btn btn-link text-center w-100 text-decoration-none buttonCards cardFont">Agregar al carrito <i
+                class="fa-solid fa-cart-arrow-down"></i></button>
           </div>
         </div>
       </div>
@@ -218,36 +226,25 @@
                     data-toggle="collapse"
                     data-target="#collapseTwo"
                     aria-expanded="true"
-                    aria-controls="collapseTwo">
+                    aria-controls="collapseTwo"
+                    id="btn-caractVermouth">
                     Características
                   </button>
                 </h5>
               </div>
-              <div id="collapseTwo"
-                class="collapse"
+              <div id="collapse"
+                class="collapse-show"
                 aria-labelledby="headingTwo"
                 data-parent="#accordion">
-                <div class="card-body">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><img src="./assets/img/eye.png"
-                        alt=""> Rojo rubí.</li>
-                    <li class="list-group-item"><img src="./assets/img/nose.png"
-                        alt=""> Pimienta, hierbas frescas y sierra cordobesa.</li>
-                    <li class="list-group-item"><img src="./assets/img/tongue.png"
-                        alt=""> Refrescante y especiado.</li>
-                    <li class="list-group-item">Intensidad en boca: <i class="fa-solid fa-wine-glass"></i><i
-                        class="fa-solid fa-wine-glass"></i></li>
-                    <li class="list-group-item">Persistencia: <i class="fa-solid fa-wine-glass"></i></li>
-                  </ul>
+                <div class="card-body" id="div-caractVermouth">
                 </div>
               </div>
             </div>
           </div>
           <div class="card-body bg-dark text-center d-flex justify-content-around align-items-center">
-            <p class="text-white cardValue m-0">$900</p>
-            <a href="#"
-              class="card-link text-decoration-none cardFont">Agregar al carrito <i
-                class="fa-solid fa-cart-arrow-down"></i></a>
+            <button id="agregar-carrito-vermouth"
+              class="btn btn-link text-center w-100 text-decoration-none buttonCards cardFont">Agregar al carrito <i
+                class="fa-solid fa-cart-arrow-down"></i></button>
           </div>
         </div>
       </div>
@@ -274,38 +271,26 @@
                     data-toggle="collapse"
                     data-target="#collapseThree"
                     aria-expanded="true"
-                    aria-controls="collapseThree">
+                    aria-controls="collapseThree"
+                    id="btn-caractBonarda">
                     Características
                   </button>
                 </h5>
               </div>
-              <div id="collapseThree"
-                class="collapse"
+              <div id="collapse"
+                class="collapse-show"
                 aria-labelledby="headingThree"
                 data-parent="#accordion">
-                <div class="card-body">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><img src="./assets/img/eye.png"
-                        alt=""> Rojo intenso.</li>
-                    <li class="list-group-item"><img src="./assets/img/nose.png"
-                        alt=""> Remembranza a maleza y
-                      hiervas.</li>
-                    <li class="list-group-item"><img src="./assets/img/tongue.png"
-                        alt=""> Largo final en boca con
-                      notas de cafe y madera.</li>
-                    <li class="list-group-item">Intensidad en boca: <i class="fa-solid fa-wine-glass"></i><i
-                        class="fa-solid fa-wine-glass"></i></li>
-                    <li class="list-group-item">Persistencia: <i class="fa-solid fa-wine-glass"></i></li>
+                <div class="card-body" id="div-caractBonarda">
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           <div class="card-body bg-dark text-center d-flex justify-content-around align-items-center">
-            <p class="text-white cardValue m-0">$1200</p>
-            <a href="#"
-              class="card-link text-decoration-none cardFont">Agregar al carrito <i
-                class="fa-solid fa-cart-arrow-down"></i></a>
+            <button id="agregar-carrito-bonarda"
+              class="btn btn-link text-center w-100 text-decoration-none buttonCards cardFont">Agregar al carrito <i
+                class="fa-solid fa-cart-arrow-down"></i></button>
           </div>
         </div>
       </div>
@@ -332,38 +317,25 @@
                     data-toggle="collapse"
                     data-target="#collapseFour"
                     aria-expanded="true"
-                    aria-controls="collapseFour">
+                    aria-controls="collapseFour"
+                    id="btn-caractViognier">
                     Características
                   </button>
                 </h5>
               </div>
-              <div id="collapseFour"
-                class="collapse"
+              <div id="collapse"
+                class="collapse-show"
                 aria-labelledby="headingFour"
                 data-parent="#accordion">
-                <div class="card-body">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><img src="./assets/img/eye.png"
-                        alt=""> Amarillo brillante con reflejos dorados.</li>
-                    <li class="list-group-item"><img src="./assets/img/nose.png"
-                        alt=""> dulce con
-                      notas de miel.</li>
-                    <li class="list-group-item"><img src="./assets/img/tongue.png"
-                        alt=""> muy fresco, frutado y
-                      levemente ácido.</li>
-                    <li class="list-group-item">Intensidad en boca: <i class="fa-solid fa-wine-glass"></i><i
-                        class="fa-solid fa-wine-glass"></i></li>
-                    <li class="list-group-item">Persistencia: <i class="fa-solid fa-wine-glass"></i></li>
-                  </ul>
+                <div class="card-body" id="div-caractViognier">
                 </div>
-              </div>
+              </button>
             </div>
           </div>
           <div class="card-body bg-dark text-center d-flex justify-content-around align-items-center">
-            <p class="text-white cardValue m-0">$900</p>
-            <a href="#"
-              class="card-link text-decoration-none cardFont">Agregar al carrito <i
-                class="fa-solid fa-cart-arrow-down"></i></a>
+            <button id="agregar-carrito-viognier"
+              class="btn btn-link text-center w-100 text-decoration-none buttonCards cardFont">Agregar al carrito <i
+                class="fa-solid fa-cart-arrow-down"></i></button>
           </div>
         </div>
       </div>
