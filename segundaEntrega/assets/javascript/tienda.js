@@ -1,6 +1,12 @@
 let inputEdad = document.getElementById("input-edad");
 let btnInputEdad = document.getElementById("btn-inputedad");
 
+let busquedaNombreTipo = document.getElementById(`buscador-texto`);
+let busquedaValorMaximo = document.getElementById(`buscador-precioMax`);
+let busquedaValorMinimo = document.getElementById(`buscador-precioMin`);
+let btnBusqueda = document.getElementById(`btn-busqueda`);
+let btnNuevaBusqueda = document.getElementById("btn-nuevaBusqueda");
+
 inputEdad.oninput = (e) => {
   let edad = e.target.value;
   btnInputEdad.onclick = () => {
@@ -14,6 +20,12 @@ inputEdad.oninput = (e) => {
       bienvenido.innerHTML = `<h4>Bienvenido a nuestra tienda!</h4>`;
       let bienvenidoDiv = document.getElementById(`bienvenido`);
       bienvenidoDiv.insertBefore(bienvenido, bienvenidoDiv.children[3]);
+
+      busquedaNombreTipo.removeAttribute("disabled", "");
+            busquedaValorMaximo.removeAttribute("disabled", "");
+            busquedaValorMinimo.removeAttribute("disabled", "");
+            btnBusqueda.removeAttribute("disabled", "");
+            btnNuevaBusqueda.removeAttribute("disabled", "");
 
       let productos = [
         {
@@ -58,10 +70,7 @@ inputEdad.oninput = (e) => {
         },
       ];
 
-      let busquedaNombreTipo = document.getElementById(`buscador-texto`);
-      let busquedaValorMaximo = document.getElementById(`buscador-precioMax`);
-      let busquedaValorMinimo = document.getElementById(`buscador-precioMin`);
-      let btnBusqueda = document.getElementById(`btn-busqueda`);
+      
       let divObjetosEncontrados = document.getElementById(`div-objetosEncontrados`);
 
       function busqueda(arr) {
@@ -91,7 +100,7 @@ inputEdad.oninput = (e) => {
           busquedaValorMinimo.setAttribute("disabled", "");
           btnBusqueda.setAttribute("disabled", "");
 
-          let btnNuevaBusqueda = document.getElementById("btn-nuevaBusqueda");
+          
           btnNuevaBusqueda.onclick = () => {
             ProdEncontrados.remove(productoBuscado);
             busquedaNombreTipo.removeAttribute("disabled", "");
@@ -124,7 +133,6 @@ inputEdad.oninput = (e) => {
             productoBuscado.innerHTML = caract;
             ProdEncontrados.appendChild(productoBuscado);
 
-            let btnNuevaBusqueda = document.getElementById("btn-nuevaBusqueda");
             btnNuevaBusqueda.onclick = () => {
               ProdEncontrados.remove(productoBuscado);
               busquedaNombreTipo.removeAttribute("disabled", "");
@@ -151,7 +159,6 @@ inputEdad.oninput = (e) => {
             productoBuscado.innerHTML = caract;
             ProdEncontrados.appendChild(productoBuscado);
 
-            let btnNuevaBusqueda = document.getElementById("btn-nuevaBusqueda");
             btnNuevaBusqueda.onclick = () => {
               ProdEncontrados.remove(productoBuscado);
               busquedaNombreTipo.removeAttribute("disabled", "");
@@ -186,7 +193,6 @@ inputEdad.oninput = (e) => {
             productoBuscado.innerHTML = caract;
             ProdEncontrados.appendChild(productoBuscado);
 
-            let btnNuevaBusqueda = document.getElementById("btn-nuevaBusqueda");
             btnNuevaBusqueda.onclick = () => {
               ProdEncontrados.remove(productoBuscado);
               busquedaNombreTipo.removeAttribute("disabled", "");
