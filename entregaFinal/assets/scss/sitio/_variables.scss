@@ -1,0 +1,12 @@
+$tituloYparrafosFont: 'Inria Serif', serif;
+$colorPrimario: silver;
+$colorSecundario: black;
+$logoFontFam: 'Junge', serif;
+$IndexSeccionviniedoSubtitulo: (
+    tamañoLetra: 2em,
+    espaciadoLetra: 3px,
+    familiaDeLetra: $tituloYparrafosFont,
+    colour: $colorPrimario,
+    subrayado: underline solid $colorPrimario 1px
+    );
+

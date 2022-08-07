@@ -1,0 +1,23 @@
+.logo {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: $logoFontFam;
+    animation-name: logoFadeIn;
+    animation-duration: 5s;
+    img {
+        box-shadow: 7px 7px #999;
+    
+        &:active {
+            box-shadow: 4px 4px #666;
+            transform: translate(3px,3px);
+        }
+
+    }       
+    @keyframes logoFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
+
+       

@@ -1,0 +1,103 @@
+/*SECCION_ENCABEZADO**/
+  .imgEncabezadoProductos {
+    background-image: url(../img/ProductosHeader.jpg); 
+    background-position: center;
+    background-size: cover;
+  } 
+
+  .inputB {
+    height: 30px;
+    width: 230px;
+  }
+
+  .buttonCards:hover {
+  color: white;
+}
+.show {
+  animation-name: displaySlow;
+  animation-duration: 3s;
+}
+@keyframes displaySlow {
+  from {display: none;}
+  to {display: block;}
+}
+
+.cardsDiv {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 750px) {
+    justify-content: space-between;
+  }
+}
+.cardFont {
+  font-family: $logoFontFam;
+}
+.card-text {
+  font-family: "Hurricane";
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #bc2a8d;
+}
+.cardValue {
+  font-family: "Hurricane";
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.matias {
+  background-color: #bc2a8d;
+}
+.cardDescuentoDiv {
+  text-align: center;
+  height: 263px;
+}
+.cardDescuento {
+  font-family: "Hurricane";
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: translateY(-150px);
+  background-color: rgba(0, 0, 0, 0.473);
+}
+.modalStyle {
+  background-color: rgba(247, 239, 239, 0.74);
+  border: 3px solid #bc2a8d;
+}
+
+.swal-title {
+  margin: 0px;
+  font-size: 25px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.212);
+  margin-bottom: 28px;
+  color: black;
+}
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: black;
+  font-size: 12px;
+  border: 1px solid white;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 2px solid #61534e;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
+  font-size: 20px;
+}
+.toastyStyle {
+  background: black;
+  color: #0d6efd;
+}
+.toastyStyle2 {
+  background: black;
+  color: red;
+}

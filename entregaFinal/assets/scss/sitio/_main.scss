@@ -1,0 +1,35 @@
+@mixin textoPropiedadesPrincipales ($tamanio, $peso, $familia, $subrayado, $colour, $espaciado, $alineado ) {
+  font-size: $tamanio;
+  font-weight: $peso;
+  font-family: $familia;
+  text-decoration: $subrayado;
+  color: $colour;
+  letter-spacing: $espaciado;
+  text-align: $alineado;
+}
+
+.woodBoard {
+    background-image: url(../img/wood_1.png);
+}
+
+.tituloWoodboard {
+    @include textoPropiedadesPrincipales(2em ,100 ,$tituloYparrafosFont ,underline solid $colorPrimario 2px ,$colorPrimario ,2px , center);
+      
+}
+            
+  .parrafoWoodboard {
+  @include textoPropiedadesPrincipales(1em,normal ,$tituloYparrafosFont ,none ,#c6cfd8 ,2px, justify);
+}
+
+.titulo {
+  @include textoPropiedadesPrincipales(1.5em ,100 ,$tituloYparrafosFont ,0 ,$colorSecundario ,3px, center);
+  }
+  @media (min-width:768px) {
+    .titulo {
+      font-size: 3.5em;
+    }
+  }
+  
+  .parrafo {
+    @include textoPropiedadesPrincipales(1em,bold ,$tituloYparrafosFont ,none ,#444444 ,2px, justify);
+  }
