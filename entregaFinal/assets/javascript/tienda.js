@@ -8,7 +8,6 @@ let btnNuevaBusqueda = document.getElementById('btn-nuevaBusqueda');
 const edadEntrada = JSON.parse(localStorage.getItem('edadUsuario'));
 
 function entrada (edadUsuario) {
-    
   
   if (!edadUsuario) {
     document.querySelector(`#contenedor-formulario`).innerHTML = `
@@ -53,10 +52,6 @@ function entrada (edadUsuario) {
       icon: 'success',
       title: 'Bienvenido a nuestra tienda!'
     })
-  
-
- 
-    
 
     busquedaNombreTipo.removeAttribute('disabled', '');
     busquedaValorMaximo.removeAttribute('disabled', '');
